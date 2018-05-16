@@ -69,3 +69,22 @@ Security
 =========
 If you find and/or think you have found a Security issue, please quietly disclose it to security@form.io, and give us
 sufficient time to patch the issue before disclosing it publicly.
+
+
+Ezhil
+======
+docker service create --name formio --network traefik --replicas 1 -l "traefik.port=3001" -l "traefik.backend=formio" -l "traefik.frontend.rule=Host:formio.mongrov.com" --with-registry-auth registry.gitlab.com/mongrov/dbbkup:latest
+
+git clone https://github.com/mezhila/formio.git
+
+apt-get install curl
+
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+
+sudo apt-get install -y nodejs
+
+vi formio/config/default.json
+
+npm install
+
+npm start &bg

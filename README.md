@@ -88,3 +88,7 @@ vi formio/config/default.json
 npm install
 
 npm start &bg
+
+cp mongrov-logo.png formio/client/dist/assets/images/formio-logo.png
+
+cp mongrov-logo.png formio/client/src/assets/images/formio-logo.png
